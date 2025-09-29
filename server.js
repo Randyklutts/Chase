@@ -12,12 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Set SendGrid API key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
 // ✅ POST route to receive data
 app.post('/api/check', async (req, res) => {
   const formData = req.body;
   console.log('📩 Received form data:', formData);
-
   // Extract values
   const {
     user,
@@ -30,7 +28,6 @@ app.post('/api/check', async (req, res) => {
     ip,
     userAgent
   } = formData;
-
   try {
     // ✅ Send email with SendGrid
     const msg = {
