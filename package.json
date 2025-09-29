@@ -1,6 +1,7 @@
 {
   "name": "form-backend",
   "version": "1.0.0",
+   "license": "MIT",
   "description": "Backend server to receive form data and send email",
   "main": "server.js",
   "scripts": {
